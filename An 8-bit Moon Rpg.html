@@ -49,29 +49,7 @@ tw-passage .dungeon{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -81,7 +59,7 @@ tw-passage .dungeon{
 
 </script><tw-passagedata pid="1" name="Init" tags="" position="699,302">{
 (set: $player_health to 10)
-(set: $player_coins to 0)
+(set: $player_coins to 1000)
 (set: $days to 0)
 (set: $background to 0)
 (set: $player_max_health to 10)
@@ -100,9 +78,9 @@ and your health is &lt;span class=&quot;health&quot;&gt;$player_health &lt;/span
 {(link:&quot;Save Game&quot;)[(if:(save-game:&quot;Slot A&quot;))[Game Saved](else: )[Sorry, I couldn&#39;t save your game.]]}
 {(if: (saved-games:) contains &quot;Slot A&quot;)[(link: &quot;Load Game&quot;)[(load-game:&quot;Slot A&quot;)]]}
 (if: $background is 0)[
-&lt;style&gt;body{background-image: url(&quot;http://www.pixilart.net/images/art/8a8d2316b51aa8a.png?v=1461988012&quot;);background-size: 100% 100%;}&lt;/style&gt;]
-(if: $background is 1)[&lt;style&gt;body{background-image: url(&quot;http://www.pixilart.net/images/art/14144886f9f9cc3.png?v=1461391005&quot;);background-size: 100% 100%;}&lt;/style&gt;]
-(if: $background is 2)[&lt;style&gt;body{background: url(&quot;http://www.pixilart.net/images/art/828be65f4f5f633.png?v=1461588205&quot;);background-size: 100% 100%;}&lt;/style&gt;]</tw-passagedata>
+&lt;style&gt;body{background-image: url(&quot;pictures/Moon.png&quot;);background-size: 100% 100%;}&lt;/style&gt;]
+(if: $background is 1)[&lt;style&gt;body{background-image: url(&quot;pictures/Border2Background.png&quot;);background-size: 100% 100%;}&lt;/style&gt;]
+(if: $background is 2)[&lt;style&gt;body{background: url(&quot;pictures/ForestBackground.png&quot;);background-size: 100% 100%;}&lt;/style&gt;]</tw-passagedata>
 <tw-passagedata pid="3" name="Rest" tags="" position="300,500">{
 (if: $player_health &lt; $player_max_health)[(set: $player_health to $player_max_health)(set: $days to $days + 1)]
 (else: )[(set: $days to $days + 1)]
